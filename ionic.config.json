@@ -1,0 +1,7 @@
+{
+  "name": "HeadCounter",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,20 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Face Detection</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- CAMERA CARD -->
+  <ion-card class="camera-card">
+    <ion-card-header>
+      <ion-card-title>Live Camera</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="camera-container">
+        <video #video autoplay muted playsinline></video>
+        <canvas #canvas></canvas>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- COUNT CARD -->
+  <ion-card class="count-card" color="light">
+    <ion-card-header>
+      <ion-card-title>Total People Detected</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h1 class="face-count">{{ faceCount }}</h1>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

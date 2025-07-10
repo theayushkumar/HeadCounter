@@ -1,27 +1,33 @@
-#container {
+.camera-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: #000;
+  overflow: hidden;
+
+  video,
+  canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.camera-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.count-card {
+  margin-top: 20px;
   text-align: center;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+  .face-count {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #3880ff;
+    margin: 0;
+  }
 }

@@ -1,0 +1,23 @@
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+
+  video, canvas {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  video {
+    position: absolute;
+    z-index: 1;
+  }
+
+  canvas {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+  }
+}

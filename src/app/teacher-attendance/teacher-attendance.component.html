@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>📋 Teacher Attendance</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-text color="medium">
+    <p style="text-align: center;">{{ matchMessage }}</p>
+    <p style="text-align: center;">
+      ✅ Total Marked: {{ attendance.length }}
+    </p>
+  </ion-text>
+
+  <div class="video-wrapper">
+    <video #videoElement autoplay muted playsinline></video>
+    <canvas #overlayCanvas></canvas>
+  </div>
+
+  <ion-card *ngIf="attendance.length > 0">
+    <ion-card-header>
+      <ion-card-title>✅ Attendance Marked</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let name of attendance">
+          <ion-icon name="checkmark-circle" color="success" slot="start"></ion-icon>
+          <ion-label>{{ name }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
